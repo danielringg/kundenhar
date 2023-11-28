@@ -1,5 +1,6 @@
 #wrapper1{
     height: 100vh;
+    background-color: whitesmoke;
     display: grid;
     grid-template-columns: 25% 25% 25% 25%;
     grid-template-rows: 20% 10% 25% 15% 20% 10%;
@@ -21,8 +22,32 @@ header{
 }
 nav{
     grid-area: nv;
+    background-color: beige;
+    display: flex;
+    color: black;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    justify-content: space-around;
 }
 .landing_section1{
     grid-area: sc1;
     text-align: center;
+    max-width: 40%;
+}
+.landing_section2{
+    grid-area: sc2;
+    text-align: center;
+    max-width: 200px;
+    background-image: url(../img/rob.gif);
+    background: cover;
+}
+.article1{
+    grid-area: ar1;
+}
+.article2{
+    grid-area: ar2;
+}
+footer{
+    grid-area: ft;
+    text-align: center;
+    background-color: #e74c3c;
 }
