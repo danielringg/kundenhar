@@ -1,10 +1,14 @@
+body{
+    margin: 0;
+}
 #wrapper1{
     height: 100vh;
-    background-color: whitesmoke;
+    width: 100vw;
+    background-color: beige;
     grid-gap: 0.5rem;
     display: grid;
-    grid-template-columns: 25% 25% 25% 25%;
-    grid-template-rows: 20% 10% 25% 15% 20% 10%;
+    grid-template-columns: 25vw 25vw 25vw 25vw;
+    grid-template-rows: 20% 10% 50% 30% 30% 10%; /*jag vet att det inte blir 100 men jag vill att man ska scrolla lite */
     grid-template-areas:
     'hd hd hd hd'
     'nv nv nv nv'
@@ -13,17 +17,28 @@
     'sc3 sc4 sc5 sc6'
     'ft ft ft ft';
 }
-
+#forum-wrapper{
+    height: 100vh;
+    background-color: whitesmoke;
+    display: grid;
+    grid-template-areas:
+    'hd hd'
+    'nv nv'
+    'f-sc1 as'
+    'f-sc2 as'
+    'f-sc3 as'
+    'f-sc4 as'
+    'ft ft'
+}
 header{
     grid-area: hd;
     background-color: #e74c3c;
-    color: whitesmoke;
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     text-align: center;
+    font-size: 1rem;
 }
 nav{
     grid-area: nv;
-    background-color: beige;
+    background-color: wheat;
     display: flex;
     color: black;
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -32,26 +47,28 @@ nav{
 #landing_section1{
     grid-area: sc1;
     text-align: center;
-    background-image: url(../img/rob.gif); /* placeholder */
-    color: whitesmoke;
-    text-shadow: 2px 3px 3px black;
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 1.5rem;
+    background-image: url(../img/clothe.jpg); /* placeholder */
+    background-size: cover;
 }
 #landing_section2{
     grid-area: sc2;
     text-align: center;
-    background-image: url(../img/rapt.jpg); /* placeholder */
-    color: whitesmoke;
-    text-shadow: 2px 3px 3px black;
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 1.5rem;
+    background-image: url(../img/peakblind.jpg); /* placeholder */
+    background-size: cover;
 }
 #article1{
     grid-area: ar1;
-    background-color: pink;
+    background-color: #e74c3c;
+    font-family: Bahnschrift;
+    padding: 1%;
 }
 #article2{
     grid-area: ar2;
-    background-color: palevioletred;
+    background-color: #e74c3c;
+    font-family: Bahnschrift;
+    padding: 1%;
 }
 footer{
     grid-area: ft;
@@ -60,17 +77,33 @@ footer{
 }
 #landing-section3{
     grid-area: sc3;
+    background-image: url(../img/clothe.jpg); /* placeholder */
+    background-size: cover;
 }
 #landing-section4{
     grid-area: sc4;
+    display: flex;
+    justify-content: center;
 }
 #landing-section5{
     grid-area: sc5;
+    display: flex;
+    justify-content: center;
 }
 #landing-section6{
     grid-area: sc6;
+    display: flex;
+    justify-content: center;
+}
+#div{
+    display: flex;
+    justify-content: center;
 }
 .img{
     max-width: 100%;
-    justify-content: flex-start;
+}
+.title{
+    color: whitesmoke;
+    text-shadow: 2px 3px 3px black;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
