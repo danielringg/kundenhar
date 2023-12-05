@@ -1,6 +1,7 @@
 #wrapper1{
     height: 100vh;
     background-color: whitesmoke;
+    grid-gap: 0.5rem;
     display: grid;
     grid-template-columns: 25% 25% 25% 25%;
     grid-template-rows: 20% 10% 25% 15% 20% 10%;
@@ -28,26 +29,48 @@ nav{
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     justify-content: space-around;
 }
-.landing_section1{
+#landing_section1{
     grid-area: sc1;
     text-align: center;
-    max-width: 40%;
+    background-image: url(../img/rob.gif); /* placeholder */
+    color: whitesmoke;
+    text-shadow: 2px 3px 3px black;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
-.landing_section2{
+#landing_section2{
     grid-area: sc2;
     text-align: center;
-    max-width: 200px;
-    background-image: url(../img/rob.gif);
-    background: cover;
+    background-image: url(../img/rapt.jpg); /* placeholder */
+    color: whitesmoke;
+    text-shadow: 2px 3px 3px black;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
-.article1{
+#article1{
     grid-area: ar1;
+    background-color: pink;
 }
-.article2{
+#article2{
     grid-area: ar2;
+    background-color: palevioletred;
 }
 footer{
     grid-area: ft;
     text-align: center;
     background-color: #e74c3c;
+}
+#landing-section3{
+    grid-area: sc3;
+}
+#landing-section4{
+    grid-area: sc4;
+}
+#landing-section5{
+    grid-area: sc5;
+}
+#landing-section6{
+    grid-area: sc6;
+}
+.img{
+    max-width: 100%;
+    justify-content: flex-start;
 }
