@@ -2,8 +2,8 @@ body{
     margin: 0;
 }
 #wrapper1{
-    height: 100vh;
-    width: 100vw;
+    /* overflow: hidden; */
+    width: 100vw;  
     background-color: beige;
     grid-gap: 0.5rem;
     display: grid;
@@ -18,11 +18,12 @@ body{
     'ft ft ft ft';
 }
 #forum-wrapper{
-    height: 100vh;
+    overflow: hidden;
     background-color: beige;
+    grid-gap: 0.5rem;
     display: grid;
     grid-template-columns: 80vw 20vw;
-    grid-template-rows: 20vh 10vh 15vh 15vh 15vh 10vh;
+    grid-template-rows: 20vh 10vh 20vh 5vh 20vh 10vh;
     grid-template-areas:
     'hd hd'
     'nv nv'
@@ -57,17 +58,20 @@ footer{
     grid-area: ft;
     text-align: center;
     background-color: #e74c3c;
-    position: sticky;
-    bottom: 0;
+    position: relative;
     width: 100vw;
 }
-.img{
-    max-width: 100%;
+a{
+    text-decoration: none;
+    color: black;
 }
 .title{
     color: whitesmoke;
     text-shadow: 2px 3px 3px black;
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.img{
+    max-width: 100%;
 }
 #landing_section1{
     grid-area: sc1;
@@ -102,8 +106,6 @@ footer{
 }
 #landing-section4{
     grid-area: sc4;
-    display: flex;
-    justify-content: center;
 }
 #landing-section5{
     grid-area: sc5;
@@ -115,9 +117,9 @@ footer{
     display: flex;
     justify-content: center;
 }
-#div{
-    display: flex;
-    justify-content: center;
+#questions{
+    height: 60vh;
+    overflow: auto;
 }
 #forum-section1{
     grid-area: f-sc1;
