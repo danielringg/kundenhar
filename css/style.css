@@ -8,7 +8,7 @@ body{
     grid-gap: 0.5rem;
     display: grid;
     grid-template-columns: 25vw 25vw 25vw 25vw;
-    grid-template-rows: 20% 10% 50% 30% 30% 10%; /*jag vet att det inte blir 100 men jag vill att man ska scrolla lite */
+    grid-template-rows: 20vh 10vh 50vh 30vh 30vh 10vh; /*jag vet att det inte blir 100 men jag vill att man ska scrolla lite */
     grid-template-areas:
     'hd hd hd hd'
     'nv nv nv nv'
@@ -19,8 +19,10 @@ body{
 }
 #forum-wrapper{
     height: 100vh;
-    background-color: whitesmoke;
+    background-color: beige;
     display: grid;
+    grid-template-columns: 80vw 20vw;
+    grid-template-rows: 20vh 10vh 15vh 15vh 15vh 10vh;
     grid-template-areas:
     'hd hd'
     'nv nv'
@@ -28,7 +30,7 @@ body{
     'f-sc2 as'
     'f-sc3 as'
     'f-sc4 as'
-    'ft ft'
+    'ft ft';
 }
 header{
     grid-area: hd;
@@ -43,6 +45,29 @@ nav{
     color: black;
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     justify-content: space-around;
+}
+aside{
+    grid-area: as;
+    background-color: #e74c3c;
+    color: whitesmoke;
+    font-family: Bahnschrift;
+    padding: 10px;   
+}
+footer{
+    grid-area: ft;
+    text-align: center;
+    background-color: #e74c3c;
+    position: sticky;
+    bottom: 0;
+    width: 100vw;
+}
+.img{
+    max-width: 100%;
+}
+.title{
+    color: whitesmoke;
+    text-shadow: 2px 3px 3px black;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 #landing_section1{
     grid-area: sc1;
@@ -70,11 +95,6 @@ nav{
     font-family: Bahnschrift;
     padding: 1%;
 }
-footer{
-    grid-area: ft;
-    text-align: center;
-    background-color: #e74c3c;
-}
 #landing-section3{
     grid-area: sc3;
     background-image: url(../img/clothe.jpg); /* placeholder */
@@ -99,11 +119,35 @@ footer{
     display: flex;
     justify-content: center;
 }
-.img{
-    max-width: 100%;
+#forum-section1{
+    grid-area: f-sc1;
+    background-color: wheat;
+    color: black;
+    font-family: Bahnschrift;
+    margin: 1%;
+    padding: 1%
 }
-.title{
-    color: whitesmoke;
-    text-shadow: 2px 3px 3px black;
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+#forum-section2{
+    grid-area: f-sc2;
+    background-color: wheat;
+    color: black;
+    font-family: Bahnschrift;
+    margin: 1%;
+    padding: 1%
+}
+#forum-section3{
+    grid-area: f-sc3;
+    background-color: wheat;
+    color: black;
+    font-family: Bahnschrift;
+    margin: 1%;
+    padding: 1%
+}
+#forum-section4{
+    grid-area: f-sc4;
+    background-color: wheat;
+    color: black;
+    font-family: Bahnschrift;
+    margin: 1%;
+    padding: 1%
 }
