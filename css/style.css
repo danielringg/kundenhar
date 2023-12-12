@@ -1,7 +1,7 @@
 body{
     margin: 0;
 }
-#wrapper1{
+#home-wrapper{
     /* overflow: hidden; */
     width: 100vw;  
     background-color: beige;
@@ -31,6 +31,18 @@ body{
     'f-sc2 as'
     'f-sc3 as'
     'f-sc4 as'
+    'ft ft';
+}
+#about-wrapper{
+    overflow: hidden;
+    background-color: beige;
+    grid-gap: 0.5rem;
+    display: grid;
+    grid-template-columns: 80vw 20vw;
+    grid-template-rows: 20vh 10vh 10vh;
+    grid-template-areas:
+    'hd hd hd'
+    'nv nv nv'
     'ft ft';
 }
 header{
@@ -72,6 +84,13 @@ a{
 }
 .img{
     max-width: 100%;
+}
+.pfp{
+    float: left;
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    border-style: hidden;
 }
 #landing_section1{
     grid-area: sc1;
