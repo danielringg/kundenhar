@@ -23,13 +23,10 @@ body{
     grid-gap: 0.5rem;
     display: grid;
     grid-template-columns: 80vw 20vw;
-    grid-template-rows: 20vh 10vh 20vh 5vh 20vh 10vh;
+    grid-template-rows: 20vh 10vh 60vh 10vh;
     grid-template-areas:
     'hd hd'
     'nv nv'
-    'f-sc as'
-    'f-sc as'
-    'f-sc as'
     'f-sc as'
     'ft ft';
 }
@@ -38,12 +35,13 @@ body{
     background-color: beige;
     grid-gap: 0.5rem;
     display: grid;
-    grid-template-columns: 50vw 50vw;
+    grid-template-columns: 100%;
     grid-template-rows: 20vh 10vh;
     grid-template-areas:
-    'hd hd hd'
-    'nv nv nv'
-    /* ''; hur gör man cards hjälp*/
+    'hd'
+    'nv'
+    'card'
+    'ft';
 }
 header{
     grid-area: hd;
@@ -89,6 +87,18 @@ a{
     border-radius: 50%;
     border-style: hidden;
 }
+.card-image{
+    height: 200px;
+    width: 150px;
+}
+.card{
+    background-color: #e74c3c;
+    color: whitesmoke;
+    padding: 1%;
+    margin: 1%;
+    flex: 20%;
+    text-align: center;
+}
 #landing_section1{
     grid-area: sc1;
     text-align: center;
@@ -121,26 +131,6 @@ a{
     display: flex;
     justify-content: space-around;
 }
-/* #landing-section3{
-    grid-area: sc3;
-    background-image: url(../img/clothe.jpg);
-    background-size: cover;
-}
-#landing-section4{
-    grid-area: sc4;
-    background-image: url(../img/clothe.jpg);
-    background-size: cover;
-}
-#landing-section5{
-    grid-area: sc5;
-    display: flex;
-    justify-content: center;
-}
-#landing-section6{
-    grid-area: sc6;
-    display: flex;
-    justify-content: center;
-} */
 #questions{
     height: 60vh;
     overflow: auto;
@@ -152,4 +142,12 @@ a{
     font-family: Bahnschrift;
     margin: 1%;
     padding: 1%
+}
+#cards{
+    grid-area: card;
+    font-family: Bahnschrift;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 1%;
 }
