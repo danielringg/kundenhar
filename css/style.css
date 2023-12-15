@@ -2,20 +2,20 @@ body{
     margin: 0;
 }
 #home-wrapper{
-    /* overflow: hidden; */
-    width: 100vw;  
+    overflow: hidden;
+    width: 100%;  
     background-color: beige;
     grid-gap: 0.5rem;
     display: grid;
-    grid-template-columns: 25vw 25vw 25vw 25vw;
-    grid-template-rows: 20vh 10vh 50vh 30vh 30vh 10vh; /*jag vet att det inte blir 100 men jag vill att man ska scrolla lite */
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 20vh 10vh 50vh 30vh 70vh 10vh; /*jag vet att det inte blir 100 men jag vill att man ska scrolla lite */
     grid-template-areas:
-    'hd hd hd hd'
-    'nv nv nv nv'
-    'sc1 sc1 sc2 sc2'
-    'ar1 ar1 ar2 ar2'
-    'sc3 sc4 sc5 sc6'
-    'ft ft ft ft';
+    'hd hd'
+    'nv nv'
+    'sc1 sc2'
+    'ar1 ar2'
+    'img img'
+    'ft ft';
 }
 #forum-wrapper{
     overflow: hidden;
@@ -27,10 +27,10 @@ body{
     grid-template-areas:
     'hd hd'
     'nv nv'
-    'f-sc1 as'
-    'f-sc2 as'
-    'f-sc3 as'
-    'f-sc4 as'
+    'f-sc as'
+    'f-sc as'
+    'f-sc as'
+    'f-sc as'
     'ft ft';
 }
 #about-wrapper{
@@ -43,7 +43,7 @@ body{
     grid-template-areas:
     'hd hd hd'
     'nv nv nv'
-    /* ''; hur gör man cards */
+    /* ''; hur gör man cards hjälp*/
 }
 header{
     grid-area: hd;
@@ -83,7 +83,7 @@ a{
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 .img{
-    max-width: 100%;
+    max-height: 100%;
 }
 .pfp{
     float: left;
@@ -106,25 +106,33 @@ a{
     background-image: url(../img/peakblind.jpg); /* placeholder */
     background-size: cover;
 }
-#article1{
+#landing-article1{
     grid-area: ar1;
     background-color: #e74c3c;
     font-family: Bahnschrift;
     padding: 1%;
 }
-#article2{
+#landing-article2{
     grid-area: ar2;
     background-color: #e74c3c;
     font-family: Bahnschrift;
     padding: 1%;
 }
-#landing-section3{
+#images{
+    overflow: hidden;
+    grid-area: img;
+    display: flex;
+    justify-content: space-around;
+}
+/* #landing-section3{
     grid-area: sc3;
-    background-image: url(../img/clothe.jpg); /* placeholder */
+    background-image: url(../img/clothe.jpg);
     background-size: cover;
 }
 #landing-section4{
     grid-area: sc4;
+    background-image: url(../img/clothe.jpg);
+    background-size: cover;
 }
 #landing-section5{
     grid-area: sc5;
@@ -135,37 +143,13 @@ a{
     grid-area: sc6;
     display: flex;
     justify-content: center;
-}
+} */
 #questions{
     height: 60vh;
     overflow: auto;
 }
-#forum-section1{
-    grid-area: f-sc1;
-    background-color: wheat;
-    color: black;
-    font-family: Bahnschrift;
-    margin: 1%;
-    padding: 1%
-}
-#forum-section2{
-    grid-area: f-sc2;
-    background-color: wheat;
-    color: black;
-    font-family: Bahnschrift;
-    margin: 1%;
-    padding: 1%
-}
-#forum-section3{
-    grid-area: f-sc3;
-    background-color: wheat;
-    color: black;
-    font-family: Bahnschrift;
-    margin: 1%;
-    padding: 1%
-}
-#forum-section4{
-    grid-area: f-sc4;
+#forum-section{
+    grid-area: f-sc;
     background-color: wheat;
     color: black;
     font-family: Bahnschrift;
